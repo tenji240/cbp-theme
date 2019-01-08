@@ -1,6 +1,8 @@
-body {
-  /* padding-top: 50px;
-  padding-bottom: 50px; */
+@import './_metadata';
+
+.fa, .fas, .far {
+  font-family: "Font Awesome\ 5 Free"!important;
+  font-weight: 900!important;
 }
 
 .toolbar-text {
@@ -8,9 +10,6 @@ body {
     display: inline-block;
     vertical-align: middle;
 }
-
-
-@import './_metadata';
 
 a:focus,
 button:focus,
@@ -86,7 +85,8 @@ input[type=radio]:focus
       + li:before{
       // extending .fa doesnt seem to work!!!
         display: inline-block;
-        font: normal normal normal $font-size-base/1 FontAwesome;
+        font: normal normal normal $font-size-base/1 "Font Awesome\ 5 Free";
+        font-weight: 900!important;
         font-size: inherit;
         text-rendering: auto;
         @include antialiasing(antialiased);

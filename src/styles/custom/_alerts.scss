@@ -35,20 +35,19 @@
     }
 }
 .alert-icon-info{
-    @extend .fa-info-circle;
+    @extend .fa-info;
 }
 
-
 .alert-icon-success {
-    @extend .fa-check ;
+    @extend .fa-check;
 }
 
 .alert-icon-danger {
-    @extend .fa-times-circle ;
+    @extend .fa-times-circle;
 }
 
 .alert-icon-warning {
-    @extend .fa-exclamation-circle ;
+    @extend .fa-exclamation-triangle;
 }
 
 .toast-list {
