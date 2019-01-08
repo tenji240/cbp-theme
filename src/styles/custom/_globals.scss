@@ -91,7 +91,7 @@ input[type=radio]:focus
         text-rendering: auto;
         @include antialiasing(antialiased);
 
-        @extend .fa:before !optional;
+        @extend .fas:before !optional;
         @extend .fa-angle-right:before;
 
         color: $gray-darker;
