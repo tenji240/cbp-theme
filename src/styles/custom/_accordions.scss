@@ -3,10 +3,10 @@
 .filter-list[role="tablist"] > .filter-group-title {
     cursor: pointer;
 
-    &[aria-expanded="false"] .fa.fa-angle-right {
+    &[aria-expanded="false"] .fas.fa-angle-right {
         @include transition(all 0.25s linear);
     }
-    &[aria-expanded="true"] .fa.fa-angle-right {
+    &[aria-expanded="true"] .fas.fa-angle-right {
         @include transition(all 0.25s linear);
         @include transform(rotate(90deg));
     }
