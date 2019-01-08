@@ -1,5 +1,7 @@
 // custom overrides!
-//$fa-font-path: "@fortawesome/fontawesome-free/webfonts" !default;
-@import "@fortawesome/fontawesome-free/css/fontawesome";
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts" !default;
+
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
 
 // last updated 01.08.2018
