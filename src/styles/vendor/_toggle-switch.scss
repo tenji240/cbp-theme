@@ -23,21 +23,16 @@ $em-base: 16 !default;
   }
 }
 
+/* Hide by default */
 
-
-
-
-/* Hide by default
- */
-
-.switch-toggle a {
-  display: none;
-  @extend .btn;
-  @extend .btn-info;
-  margin: 0 !important;
+.switch-toggle {
+  a {
+    display: none;
+    @extend .btn;
+    @extend .btn-info;
+    margin: 0 !important;
+  }
 }
-
-
 
 /* We can't test for a specific feature,
  * so we only target browsers with support for media queries.
@@ -54,7 +49,6 @@ $em-base: 16 !default;
     border: 1px solid $gray-light;
     border-radius: 4px;
 
-
     a {
       display: block;
       color: $white;
@@ -63,13 +57,11 @@ $em-base: 16 !default;
 
     label,
     >span {
-      /* breathing room for bootstrap/foundation classes.
-     */
+      /* breathing room for bootstrap/foundation classes.*/
       line-height: 2em;
     }
 
-    /* For callout panels in foundation
-  */
+    /* For callout panels in foundation*/
     padding: 0 !important;
 
     input {
@@ -212,7 +204,6 @@ $em-base: 16 !default;
  */
 
 @media only screen and (-webkit-max-device-pixel-ratio: 2) and (max-device-width: size(1280)) {
-
   .switch-toggle {
     -webkit-animation: webkitSiblingBugfix infinite 1s;
   }

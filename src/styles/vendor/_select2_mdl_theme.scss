@@ -1,13 +1,13 @@
 
 .select2-field {
 	position: relative;
-    font-size: 13px;
-    display: inline-block;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 20px 0;
+	font-size: 13px;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+	padding: 20px 0;
 
 	.select2, select {
 		width: 100%;
@@ -15,16 +15,15 @@
 
 	label {
 		padding-left: 8px;
-	    position: absolute;
-	    display: block;
-	    top: 30px;
-	    width: 100%;
-	    overflow: hidden;
-	    white-space: nowrap;
-	    text-align: left;
-	    margin: 0;
-
-	    @include material-animation-default();
+		position: absolute;
+		display: block;
+		top: 30px;
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-align: left;
+		margin: 0;
+	  @include material-animation-default();
 	}
 
 	&.is-dirty {
@@ -37,8 +36,8 @@
 				font-size: 13px;
 				display: block;
 				top: 0;
-    			padding-left: 0px;
-    			color: $brand-info;
+				padding-left: 0px;
+				color: $brand-info;
 			}
 		}
 	}
@@ -56,7 +55,7 @@
 		}
 	}
 
-
+	// specific overrides
 	.select2-container--default .select2-results__option--highlighted[aria-selected],
 	.select2-container--default.select2-container--focus .selection .select2-selection--multiple,
 	.select2-container--default .selection .select2-selection--multiple:hover,
@@ -65,7 +64,6 @@
 		background-color: $input-hover;
 		color: $text-color;
 	}
-
 
 	.select2-container--default .select2-selection--multiple,
 	.select2-container--default .select2-selection--single,
@@ -85,7 +83,6 @@
 		height: 30px;
 		padding: 12px 0 0 3px;
 	}
-
 
 	.select2-container--default .select2-selection--multiple input {
 		margin: 0;
@@ -124,13 +121,13 @@
 	.select2-container--default .select2-selection--single .select2-selection__arrow b {
 		border-color: #808080 transparent transparent transparent;
 		border-style: solid;
-	    border-width: 5px 5px 0 5px;
+	  border-width: 5px 5px 0 5px;
 	}
 
 	.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
 		margin-top: -4px;
-	    border-width: 0 5px 5px 5px;
-	    border-color: transparent transparent #808080 transparent;
+		border-width: 0 5px 5px 5px;
+		border-color: transparent transparent #808080 transparent;
 	}
 	    
 
@@ -144,17 +141,13 @@
 		border-right: none;
 		border-left: none
 	}
-	
-
 }
 
 .select2-dropdown {
 	border-radius: 2px;
 
 	.select2-results {
-
 		.select2-results__options {
-
 			.select2-results__option {
 				padding: 13px !important;
 			}
@@ -163,9 +156,7 @@
 				background-color: $input-hover;
 				color: $text-color;
 			}
-
 		}
-
 	}
 }
 
