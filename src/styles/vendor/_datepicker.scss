@@ -16,64 +16,53 @@
 
     thead th {
         // mute the days-of-the-week headers
-        color: #999;
+        color: $gray-mute;
         text-align: center;
     }
 
-    td .ui-state-hover {
-        background-color: $dropdown-link-hover-bg;
+    td {
+        .ui-state-hover {
+            background-color: $dropdown-link-hover-bg;
+        }
+        .ui-state-active {
+            color: $component-active-color;
+            background-color: $component-active-bg;
+            border-radius: 2px;
+        }
+        a, span {
+            padding: .3em;
+            text-align: center;
+            color: $text-color;
+            font-size: $font-size-base;    
+        }
+
+        span {
+            color: $gray-mute;
+        }
     }
-
-    td .ui-state-active {
-        color: $component-active-color;
-        background-color: $component-active-bg;
-        border-radius: 2px;
-    }
-
-    td a, td span {
-        padding: .3em;
-        text-align: center;
-        color: $text-color;
-        font-size: $font-size-base;
-    }
-
-    td span {
-        color: #ccc;
-    }
-
-    .ui-datepicker-unselectable {
-        // background-color: #f6f6f6;
-    }
-
-
-
 
     /* icons */
 
-    .ui-datepicker-prev .ui-icon,
-    .ui-datepicker-next .ui-icon {
-        overflow: visible;
-        margin-left: 0;
-        margin-top: -12px;
-    }
-
-    .ui-datepicker-prev .ui-icon:after, .ui-datepicker-next .ui-icon:after {
-        @extend .fas;
-        @extend .fas:after !optional;
-        margin-left: -4px;
-    }
-
-    .ui-datepicker-prev, .ui-datepicker-next {
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
         cursor: pointer;
-    }
+        @extend .fas;
+        top: 10px;
 
-    .ui-datepicker-prev-hover, .ui-datepicker-prev {
-        top: 7px;
-        left: 2px;
-    }
-    .ui-datepicker-next-hover, .ui-datepicker-next {
-        top: 7px;
-        right: 2px;
+        .ui-icon {
+            overflow: visible;
+            margin-left: 0;
+            margin-top: -12px;
+            &:after {
+                @extend .fas;
+                @extend .fas:after !optional;
+                margin-left: -4px;
+            }
+        }
+
+        &.ui-state-hover {
+            text-decoration: none;
+        }
     }
 
     button.ui-state-default {
@@ -86,28 +75,12 @@
     }
 
     .ui-datepicker-prev {
-      @extend .fas;
       @extend .fa-chevron-left;
-      top: 10px !important;
-      left: 2px !important;
-
-      &.ui-state-hover {
-        top: 10px;
-        left: 2px !important;
-        text-decoration: none !important;
-      }
+      left: 2px;
     }
 
     .ui-datepicker-next {
-      @extend .fas;
       @extend .fa-chevron-right;
-      top: 10px !important;
-      right: -14px !important;
-
-      &.ui-state-hover {
-        top: 10px;
-        right: -14px !important;
-        text-decoration: none !important;
-      }
+      right: -14px ;
     }
 }
