@@ -3,18 +3,19 @@
   -webkit-flex-direction: row;
   flex-direction: row;
   padding-top: 50px;
+
   .sidebar {
     z-index: 990;
     background-color: $gray-lightest;
-    border-right: 1px solid #eee;
+    border-right: 1px solid $gray-lighter;
     float: left;
     display: block;
     margin-left: -8px; //this is to offset container-fluid padding
     box-sizing: border-box;
   }
-  .cbp-sidebar-offset {
-    margin-right: -8px; //this is to offset container-fluid padding   
-  }
+
+  //this is to offset container-fluid padding   
+  .cbp-sidebar-offset { margin-right: -8px; }
 
   &.fluid-layout {
     padding-left: 8px;
@@ -42,9 +43,6 @@
   }
 }
 
-
-
-
 /* Small devices (tablets, 768px and up) and smaller than 991px*/
 
 @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
@@ -68,12 +66,8 @@
       bottom: 0;
 
       left: 0;
-      &.after-header {
-        top: 50px;
-      }
-      &.after-double-header {
-        top: 100px;
-      }
+      &.after-header { top: 50px; }
+      &.after-double-header { top: 100px; }
     }
     .cbp-sidebar-offset {
       margin-left: 300px;
@@ -81,8 +75,6 @@
     }
   }
 }
-
-
 
 /* Medium devices (desktops, 992px and up) */
 
@@ -106,12 +98,8 @@
       position: fixed;
       bottom: 0;
       left: 0;
-      &.after-header {
-        top: 50px;
-      }
-      &.after-double-header {
-        top: 100px;
-      }
+      &.after-header { top: 50px; }
+      &.after-double-header { top: 100px; }
     }
     .cbp-sidebar-offset {
       margin-left: 350px;
