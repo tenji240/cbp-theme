@@ -9,23 +9,23 @@
   border-#{$direction}: $width solid $color;
 }
 
-$card-background-color: unquote("rgb(#{$white})");
-$card-text-color: unquote("rgb(#{$gray-darker})");
-$card-image-placeholder-color: $gray-lighter;
-$card-supporting-text-text-color: unquote("rgba(#{$gray-darker}, 0.54)");
-$card-border-color: $gray-lighter;
-$card-border-width: 3px;
-$card-boxshadow: 0 0 4px 1px lighten(#000, 25%);
-$card-subtitle-color: unquote("rgba(#{$gray-darker}, 0.54)");
-$cbp-card-height: 250px;
+$card-background-color:             unquote("rgb(#{$white})");
+$card-text-color:                   unquote("rgb(#{$gray-darker})");
+$card-image-placeholder-color:      $gray-lighter;
+$card-supporting-text-text-color:   unquote("rgba(#{$gray-darker}, 0.54)");
+$card-border-color:                 $gray-lighter;
+$card-border-width:                 3px;
+$card-boxshadow:                    0 0 4px 1px lighten($gray-base, 25%);
+$card-subtitle-color:               unquote("rgba(#{$gray-darker}, 0.54)");
+$cbp-card-height:                   250px;
 
-$card-font-size: $font-size-base; // 13px
-$card-title-font-size: ceil(($font-size-base * 1.20)); // ~18px
-$card-title-text-font-weight: 500;
-$card-subtitle-font-size: floor(($font-size-base * 1.07)); // ~16px
-$card-supporting-text-font-size: floor(($font-size-base * 1.04)); // ~13px
-$card-supporting-text-line-height: 18px;
-$card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
+$card-font-size:                    $font-size-base; // 13px
+$card-title-font-size:              ceil(($font-size-base * 1.20)); // ~18px
+$card-title-text-font-weight:       500;
+$card-subtitle-font-size:           floor(($font-size-base * 1.07)); // ~16px
+$card-supporting-text-font-size:    floor(($font-size-base * 1.04)); // ~13px
+$card-supporting-text-line-height:  18px;
+$card-actions-font-size:            ceil(($font-size-base * 1.04)); // ~15px
 
 .mdl-card {
   display: flex;
@@ -116,22 +116,11 @@ $card-actions-font-size: ceil(($font-size-base * 1.04)); // ~15px
   flex-grow: 1;
 }
 
-
 .mdl-card__menu {
   position: absolute;
   right: 16px;
   top: 16px;
 }
-
-
-
-
-
-
-
-
-
-
 
 /* CBP Extensions */
 
