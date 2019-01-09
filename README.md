@@ -1,7 +1,6 @@
 # Modified CBP Common Theme 
 
 ## Updated Packages/Elements
-
 - now supports `@fortawesome/fontawesome-free` package, which includes/supports  Font Awesome v.5.4.1
 
 This is the common UI theme for CBP. It is used for internal and external web applications. We encourage the reuse of the theme and welcome contributions.  The theme is a set of artifacts (CSS, Javascript, and fonts), and we provide a static html page to demonstrate all the components available called the [Kitchen Sink](https://us-cbp.github.io/cbp-theme).  We also provide a [Style Guide](https://us-cbp.github.io/cbp-style-guide) to give guidance on how to use each component or pattern.
