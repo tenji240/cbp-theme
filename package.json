@@ -115,8 +115,8 @@
   },
   "dependencies": {
     "bootstrap-sass": "3.3.7",
-    "font-awesome": "4.6.3",
     "jquery": "3.3.1",
+    "@fortawesome/fontawesome-free": "5.6.3",
     "material-design-lite": "1.1.1",
     "mdl-selectfield": "1.0.2",
     "roboto-fontface": "0.10.0"

@@ -20,7 +20,7 @@ function getCommonOptions (input, name, excludeExternal) {
     aliases: {
       '$': 'jquery',
       './dependencyLibs/inputmask.dependencyLib': path.join(projectRoot, 'node_modules/inputmask/dist/inputmask/dependencyLibs/inputmask.dependencyLib.jquery.js'),
-      'bootstrap': path.join(projectRoot, 'node_modules/bootstrap/dist/js/bootstrap.js')
+      'bootstrap': path.join(projectRoot, 'node_modules/bootstrap/dist/js/bootstrap.js'),
     }
   }
 }

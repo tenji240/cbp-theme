@@ -18,7 +18,7 @@
 $roboto-font-path: 'roboto-fontface/fonts' !default;
 @import "vendor/roboto";
 
-$fa-font-path: "font-awesome/fonts" !default;
+$fa-font-path: "@fortawesome/fontawesome-free/webfonts" !default;
 @import "vendor/fontawesome";
 
 @import "vendor/select2_mdl_theme";

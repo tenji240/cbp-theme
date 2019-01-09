@@ -33,7 +33,7 @@ $dropdownMenu-content: 5px;
   }
 
   &-nav > li > a > .glyphicon,
-  &-nav > li > a > .fa {
+  &-nav > li > a > .fas {
     line-height: 0;
     top: 2px;
     padding: 0 2px;
@@ -395,12 +395,14 @@ $dropdownMenu-content: 5px;
       @include header-collapse-btn();
 
       &.collapsed::before {
-        font-family: FontAwesome;
-      content: "\f0c9 \00a0\00a0 Menu";
+        font-family: "Font Awesome\ 5 Free";
+        content: "\f0c9 \00a0\00a0 Menu";
+        font-weight: 900;
       }
       &::before {
-        font-family: FontAwesome;
-      content: "\f00d \00a0\00a0 Close";
+        font-family: "Font Awesome\ 5 Free";
+        content: "\f00d \00a0\00a0 Close";
+        font-weight: 900;
       }
     }
 

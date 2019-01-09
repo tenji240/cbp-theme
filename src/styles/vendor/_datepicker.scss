@@ -58,8 +58,8 @@
     }
 
     .ui-datepicker-prev .ui-icon:after, .ui-datepicker-next .ui-icon:after {
-        @extend .fa;
-        @extend .fa:after !optional;
+        @extend .fas;
+        @extend .fas:after !optional;
         margin-left: -4px;
     }
 
@@ -86,7 +86,7 @@
     }
 
     .ui-datepicker-prev {
-      @extend .fa;
+      @extend .fas;
       @extend .fa-chevron-left;
       top: 10px !important;
       left: 2px !important;
@@ -99,7 +99,7 @@
     }
 
     .ui-datepicker-next {
-      @extend .fa;
+      @extend .fas;
       @extend .fa-chevron-right;
       top: 10px !important;
       right: -14px !important;
