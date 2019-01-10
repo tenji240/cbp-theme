@@ -1,31 +1,31 @@
 
 .panel-group[role="tablist"] > .panel > .panel-heading > .panel-title > a,
 .filter-list[role="tablist"] > .filter-group-title {
-    cursor: pointer;
+  cursor: pointer;
 
-    &[aria-expanded="false"] .fas.fa-angle-right {
-        @include transition(all 0.25s linear);
-    }
-    &[aria-expanded="true"] .fas.fa-angle-right {
-        @include transition(all 0.25s linear);
-        @include transform(rotate(90deg));
-    }
+  &[aria-expanded="false"] .fas.fa-angle-right {
+    @include transition(all 0.25s linear);
+  }
+  &[aria-expanded="true"] .fas.fa-angle-right {
+    @include transition(all 0.25s linear);
+    @include transform(rotate(90deg));
+  }
 }
 
 .panel-group > .panel + .panel {
-    margin-top: -1px;
+  margin-top: -1px;
 }
 
 .panel-group .panel:not(.panel-default) > .panel-heading + .panel-collapse > .panel-body {
-    border-top: none;
+  border-top: none;
 }
 
 .panel-group .panel:not(.panel-default) {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .panel-group .panel:not(.panel-default) + .panel{
-    border-top: 1px solid #eee;
+  border-top: 1px solid #eee;
 }
 
 

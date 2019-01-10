@@ -4,24 +4,13 @@
 
   tbody {
     tr {
-      &.is-selected {
-        background-color: $state-primary-bg;
-      }
-
-      &:hover {
-        background-color: $table-bg-hover;
-      }
+      &.is-selected { background-color: $state-primary-bg; }
+      &:hover { background-color: $table-bg-hover; }
     }
   }
   td, th {   
-
-    &:first-of-type {
-      padding-left: $table-cell-padding;
-    }
-
-    &:last-of-type {
-      padding-right: $table-cell-padding;
-    }
+    &:first-of-type { padding-left: $table-cell-padding; }
+    &:last-of-type { padding-right: $table-cell-padding; }
   }
 }
 
@@ -30,20 +19,20 @@
 // Adds styling for sortable/disabled/active sort cells.
 
 .table-sortable {
-    > thead > tr > .sortable {
-        &.active {
-            background: $table-bg-hover; //overrides bootstrap's active color
-            border-color: $brand-primary;
-            color: #222;
-            font-weight: 700;
-        }
-
-        &:hover {
-            background: $table-bg-hover;
-            border-color: $brand-primary;
-            cursor: pointer;
-        }
+  > thead > tr > .sortable {
+    &.active {
+      background: $table-bg-hover; //overrides bootstrap's active color
+      border-color: $brand-primary;
+      color: $gray-darker;
+      font-weight: 700;
     }
+
+    &:hover {
+      background: $table-bg-hover;
+      border-color: $brand-primary;
+      cursor: pointer;
+    }
+  }
 }
 
 // Borderless version
@@ -62,17 +51,13 @@
   }
 }
 
-.panel > .panel-collapse > .table {
-    border-top: 1px solid $panel-default-border;
-}
+.panel > .panel-collapse > .table { border-top: 1px solid $panel-default-border; }
 
 // Borderless version
 //
 // gets rid of all cell borders
 
-.table-bordered {  
-  border: 1px solid $table-border-color;  
-}
+.table-bordered { border: 1px solid $table-border-color; }
 
 // Row hover effect
 //
@@ -89,15 +74,13 @@
 //
 // Adds a border to the outside of the table, but not the cells.
 
-.table-outline {
-    border: 1px solid $table-border-color;
-}
+.table-outline { border: 1px solid $table-border-color; }
 
 // Vertical align middle all cells
 .table-valign {
-    > tbody > tr > td {
-        vertical-align: middle;
-    }
+  > tbody > tr > td {
+    vertical-align: middle;
+  }
 }
 
 // table with extra padding
@@ -117,50 +100,45 @@
 // table with odd and even color switched
 .table-striped {
   > tbody {
-    > tr:nth-of-type(even) {
-    background-color: $table-bg-accent;
-    }
-    tr:nth-of-type(odd) {
-    background-color: $white;
-    }
+    > tr:nth-of-type(even) { background-color: $table-bg-accent; }
+    tr:nth-of-type(odd) { background-color: $white; }
   }
 }
 
 
 // Adds a background color to the table header
 .table > thead > tr {
-    background: $gray-lighter;
+  background: $gray-lighter;
   > th {
     border-bottom-color: $table-border-color;
     border-bottom-width: 2px;
-    // font-weight: 600;
   }
 }
 
 .table-group {
-    background-color: darken($table-bg-hover, 5%);
+  background-color: darken($table-bg-hover, 5%);
 }
 
 // Styles the .table-config-column
 .table > thead > tr > .table-config-column {
-    width: 28px;
-    text-align: center;
+  width: 28px;
+  text-align: center;
+  padding: 0;
+  vertical-align: middle;
+
+  > button {
+    background: none;
     padding: 0;
-    vertical-align: middle;
+    margin: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
 
-    > button {
-      background: none;
-      padding: 0;
-      margin: 0;
-      border: none;
-      width: 100%;
-      height: 100%;
-
-      &:hover {
-          background-color: $table-bg-hover;
-          border-color: $brand-primary;
-      }
+    &:hover {
+      background-color: $table-bg-hover;
+      border-color: $brand-primary;
     }
+  }
 }
 
 // Expandable tables
@@ -186,45 +164,27 @@
 
 // Contextual backgrounds
 
-.table-primary {
-    @include table-variant($state-primary-bg, $white);
-}
-.table-success {
-    @include table-variant($state-success-bg, $white);
-}
-.table-warning {
-    @include table-variant($state-warning-bg, $brand-warning-text);
-}
-.table-danger {
-    @include table-variant($state-danger-bg, $white);
-}
-.table-info {
-    @include table-variant($state-info-bg, $white);
-}
-.table-inverse {
-    @include table-variant($gray-dark, $gray-light);
-}
+.table-primary  { @include table-variant($state-primary-bg, $white); }
+.table-success  { @include table-variant($state-success-bg, $white); }
+.table-warning  { @include table-variant($state-warning-bg, $brand-warning-text); }
+.table-danger   { @include table-variant($state-danger-bg, $white); }
+.table-info     { @include table-variant($state-info-bg, $white); }
+.table-inverse  { @include table-variant($gray-dark, $gray-light); }
 .table-clear {
-  > thead > tr {
-    background: transparent;
-  }
+  > thead > tr {background: transparent; }
 }
 
 .table {
-  
   @extend .mdl-data-table;
-
   > tbody > tr > td.non-numeric,
   > thead > tr > th.non-numeric {
     @extend .mdl-data-table__cell--non-numeric;
   }
-  > tbody > tr > td {
-    color: $gray-dark;
-  }
+  > tbody > tr > td { color: $gray-dark;  }
   > tbody > tr > th {
-      text-align: left !important;
-      color: $gray-dark;
-      font-weight: normal;
+    text-align: left !important;
+    color: $gray-dark;
+    font-weight: normal;
   }
 }
 
@@ -235,8 +195,8 @@
   > thead > tr > th:first-child,
   > tbody > tr > td:first-child,
   > tbody > tr > th {
-      text-align: left !important;
-      width: 50px;
+    text-align: left !important;
+    width: 50px;
   }
 
   thead {

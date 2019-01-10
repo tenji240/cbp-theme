@@ -1,11 +1,5 @@
-dt {
-  font-weight: 600;
-  // color: $gray-light;
-}
-
-dd {
-  margin-bottom: 6px;
-}
+dt { font-weight: 600; }
+dd { margin-bottom: 6px; }
 
 @media (min-width: $screen-sm) {
   .dl-horizontal dd {
@@ -17,7 +11,6 @@ dd {
   @include clearfix();
   dd, dt {
     font-weight: 400;
-    float: left;
     display: inline-block;
     color: $gray-light;
   }

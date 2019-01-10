@@ -17,18 +17,17 @@
 }
 
 select::-ms-expand {
-    display: none;
+  display: none;
 }
 
 select {
   option {
-        padding: 3px 20px;
+    padding: 3px 20px;
   }
 }
 
-.checkbox-inline .mdl-checkbox,
-.checkbox-inline .cbp-checkbox {
-  width: auto;
+.checkbox-inline {
+  .mdl-checkbox, .cbp-checkbox { width: auto; }
 }
 
 // improve checkbox/radio positioning
@@ -36,74 +35,82 @@ input[type="radio"], input[type="checkbox"] {
     margin: .2em 0 0;
 }
 
-.is-disabled .mdl-radio__ripple-container,
-.is-disabled .mdl-checkbox__ripple-container,
-.is-disabled .mdl-checkbox__label,
-.is-disabled .mdl-radio__label,
-input[disabled], select[disabled] {
-  cursor: not-allowed !important;
+.is-disabled {
+  .mdl-radio__ripple-container,
+  .mdl-checkbox__ripple-container,
+  .mdl-checkbox__label,
+  .mdl-radio__label {
+    cursor: not-allowed !important;
+  }
 }
 
 .is-disabled .mdl-selectfield__label {
   color: rgba(0, 0, 0, 0.26) !important;
 }
 
-.mdl-textfield.is-disabled .mdl-textfield__label, .mdl-textfield.is-disabled .mdl-selectfield__label {
-  color: rgba(0, 0, 0, 0.26) !important;
-  .required-field:after {
-    content: " " !important;
+.mdl-textfield.is-disabled  {
+  &.mdl-textfield__label, &.mdl-selectfield__label{
+    color: rgba(0, 0, 0, 0.26) !important;
+    .required-field:after {
+      content: " " !important;
+    }
   }
 }
 
-.mdl-textfield.is-readonly .mdl-textfield__label, .mdl-textfield.is-readonly .mdl-selectfield__label , fieldset[readonly] .mdl-textfield .mdl-textfield__label {
-  color: rgba(0, 0, 0, 0.56) ;
-  .required-field:after {
-    content: " " !important;
+.mdl-textfield.is-readonly {
+  &.mdl-textfield__label,
+  &.mdl-selectfield__label {
+    color: rgba(0, 0, 0, 0.56);
+    .required-field:after {
+      content: " " !important;
+    }
   }
+  .mdl-textfield__input {
+    color: rgba(0, 0, 0, 0.26);
+    cursor: not-allowed;
+    background-color: transparent;
+    border-bottom: 1px dotted #808080;
+  }
+  
+  .mdl-textfield__label { color: rgba(0, 0, 0, 0.56); }
+  input { pointer-events: none; }
 }
 
-.mdl-textfield.is-readonly .mdl-textfield__input, fieldset[readonly] .mdl-textfield .mdl-textfield__input {
-  color: rgba(0, 0, 0, 0.26) ;
-  cursor: not-allowed;
-  background-color: transparent;
-  border-bottom: 1px dotted #808080;
-}
+ fieldset[readonly] .mdl-textfield {
+  .mdl-textfield__label {
+    color: rgba(0, 0, 0, 0.56);
+    .required-field:after { content: " " !important; }
+    .mdl-textfield__label { color: rgba(0, 0, 0, 0.56); }
 
-.mdl-textfield.is-readonly input {
-  pointer-events: none;
-}
+    .mdl-textfield__input {
+      color: rgba(0, 0, 0, 0.26);
+      cursor: not-allowed;
+      background-color: transparent;
+      border-bottom: 1px dotted #808080; 
+    }
 
-.mdl-textfield.is-readonly .mdl-textfield__label, fieldset[readonly] .mdl-textfield .mdl-textfield__label {
-  color: rgba(0, 0, 0, 0.56) ;
-}
-
-.mdl-textfield.is-readonly .mdl-textfield__input, fieldset[readonly] .mdl-textfield .mdl-textfield__input {
-  color: rgba(0, 0, 0, 0.26) ;
-  cursor: not-allowed;
-  background-color: transparent;
-  border-bottom: 1px dotted #808080;
-
-
-}
-.mdl-textfield.is-readonly input {
-  pointer-events: none;
-}
-
+    .mdl-textfield__input {
+      color: rgba(0, 0, 0, 0.26) ;
+      cursor: not-allowed;
+      background-color: transparent;
+      border-bottom: 1px dotted #808080;    
+    }
+  }
+ }
 
 // removes shadow from inputs and darkens focused field
 .form-control {
+  box-shadow: none;
+  display: inline;
+  line-height: normal;
+
+  &:focus {
     box-shadow: none;
-    height: 32px;
-    display: inline;
-    line-height: normal;
+  }
 
-    &:focus {
-        box-shadow: none;
-    }
-
-    .has-error & {
-        box-shadow: none;
-    }
+  .has-error & {
+    box-shadow: none;
+  }
 }
 
 .form-control:-ms-input-placeholder {
@@ -142,68 +149,51 @@ input[disabled], select[disabled] {
 
 // adds required asterisk after label
 form:not(.form-horizontal) {
-    label.required::after {
-        position: relative;
-        content: "*";
-        // color: $state-danger-text;
-        left: 4px;
-        font-size: $font-size-base - 1;
-    }
+  label.required::after {
+    position: relative;
+    content: "*";
+    left: 4px;
+    font-size: $font-size-base - 1;
+  }
 }
 
 // adds required asterisk before label
 .form-horizontal {
-    @media(min-width: $screen-sm) {
-        label.required::before {
-            position: relative;
-            content: "*";
-            // color: $state-danger-text;
-            left: -4px;
-            font-size: $font-size-base - 1;
-        }
+  @media(min-width: $screen-sm) {
+    label.required::before {
+      position: relative;
+      content: "*";
+      left: -4px;
+      font-size: $font-size-base - 1;
     }
-    @media(max-width: 767px) {
-        label.required::after {
-            position: relative;
-            content: "*";
-            // color: $state-danger-text;
-            left: 4px;
-            font-size: $font-size-base - 1;
-        }
+  }
+  @media(max-width: 767px) {
+    label.required::after {
+      position: relative;
+      content: "*";
+      left: 4px;
+      font-size: $font-size-base - 1;
     }
+  }
 }
 
-.input-search {
-    border-radius: 100px;
-}
+.input-search { border-radius: 100px; }
 
 // Add an icon inside the front of an input
 .input-icon {
-    position: absolute;
-    pointer-events: none;
-    margin-top: 7px;
-    margin-left: 9px;
-    opacity: .35;
+  position: absolute;
+  pointer-events: none;
+  margin-top: 7px;
+  margin-left: 9px;
+  opacity: .35;
 }
-.input-icon+input {
-    padding-left: 28px;
-}
+.input-icon + input { padding-left: 28px; }
 
-.form-control-width-xs {
-    max-width: 75px;
-}
-.form-control-width-sm {
-    max-width: 150px;
-}
-.form-control-width-md {
-    max-width: 250px;
-}
-.form-control-width-lg {
-    max-width: 350px;
-}
-.form-control-width-fill {
-    max-width: 100%;
-}
+.form-control-width-xs    { max-width: 75px; }
+.form-control-width-sm    { max-width: 150px; }
+.form-control-width-md    { max-width: 250px; }
+.form-control-width-lg    { max-width: 350px; }
+.form-control-width-fill  { max-width: 100%; }
 
 .dropdown-menu > .active > a,
 .ui-datepicker > .active > a,
@@ -221,22 +211,15 @@ form:not(.form-horizontal) {
 // checkbox
 .cbp-checkbox {
   position: relative;
-
   z-index: 1;
-
   vertical-align: middle;
-
   display: inline-block;
-
   box-sizing: border-box;
   width: 100%;
   height: $checkbox-label-height;
   margin: 0;
   padding: 0;
-
-  &.is-upgraded {
-    padding-left: $checkbox-button-size + $checkbox-padding;
-  }
+  &.is-upgraded { padding-left: $checkbox-button-size + $checkbox-padding; }
 }
 
 .mdl-checkbox__input {
@@ -262,20 +245,15 @@ form:not(.form-horizontal) {
   position: absolute;
   top: $checkbox-top-offset;
   left: 0;
-
   display: inline-block;
-
   box-sizing: border-box;
   width: $checkbox-button-size;
   height: $checkbox-button-size;
   margin: 0;
-
   cursor: pointer;
   overflow: hidden;
-
   border: 2px solid $checkbox-off-color;
   border-radius: 2px;
-
   z-index: 2;
 
   .cbp-checkbox.is-checked & {
@@ -293,16 +271,12 @@ form:not(.form-horizontal) {
   position: absolute;
   top: $checkbox-top-offset;
   left: 0;
-
   display: inline-block;
-
   box-sizing: border-box;
   width: $checkbox-button-size;
   height: $checkbox-button-size;
   border-radius: 50%;
-
   background-color: transparent;
-
   .cbp-checkbox.is-focused & {
     box-shadow: 0 0 0px ($checkbox-button-size / 2) rgba(0, 0, 0, 0.1);
     background-color: rgba(0, 0, 0, 0.1);
@@ -333,12 +307,10 @@ form:not(.form-horizontal) {
   z-index: 2;
   top: -(($checkbox-ripple-size - $checkbox-label-height) / 2);
   left: -(($checkbox-ripple-size - $checkbox-button-size) / 2);
-
   box-sizing: border-box;
   width: $checkbox-ripple-size;
   height: $checkbox-ripple-size;
   border-radius: 50%;
-
   cursor: pointer;
 
   overflow: hidden;
@@ -388,11 +360,7 @@ form:not(.form-horizontal) {
     //background-color: $white !important;
     padding: $selectfield-padding 3px !important;
     border-bottom: 1px solid $gray;
-
-
-    &:hover {
-      background-color: $input-hover !important;
-    }
+    &:hover { background-color: $input-hover !important; }
   }
 
   .mdl-selectfield__label {
@@ -409,9 +377,7 @@ form:not(.form-horizontal) {
   &.mdl-selectfield--multiple {
     @extend .is-dirty;
 
-    &:after {
-      border:none;
-    }
+    &:after { border: none; }
   }
 
   &.mdl-selectfield--floating-label.is-dirty,
@@ -422,11 +388,8 @@ form:not(.form-horizontal) {
       color: $brand-info;
     }
   }
-
 }
 
 @media (max-width:$screen-sm) {
-  .mdl-textfield {
-    width: inherit;
-  }
+  .mdl-textfield { width: inherit; }
 }
