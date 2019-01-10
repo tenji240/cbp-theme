@@ -1,7 +1,7 @@
 {
   "name": "cbp-theme-modified",
   "description": "Modified and Updated CBP Common Framework UI Theme",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "CBP Common Framework / Tenji240",
   "main": "./dist/cbp-theme.umd.js",
   "module": "./dist/cbp-theme.esm5.js",
