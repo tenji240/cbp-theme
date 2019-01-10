@@ -2,6 +2,8 @@
 
 ## Updated Packages/Elements
 - now supports `@fortawesome/fontawesome-free` package, which includes/supports  Font Awesome v.5.4.1
+- refactored Vendor and Custom SASS code
+
 
 This is the common UI theme for CBP. It is used for internal and external web applications. We encourage the reuse of the theme and welcome contributions.  The theme is a set of artifacts (CSS, Javascript, and fonts), and we provide a static html page to demonstrate all the components available called the [Kitchen Sink](https://us-cbp.github.io/cbp-theme).  We also provide a [Style Guide](https://us-cbp.github.io/cbp-style-guide) to give guidance on how to use each component or pattern.
 
@@ -118,12 +120,8 @@ Refer to `kitchensink/index.html` for markup reference.
   <script src="./path/to/cbp-theme.browser.bundle.umd.js"></script>
 ```
 
-# Importing Style Sheets
-For more advanced users checkout wiki [Guide to Importing Style Sheets.](https://github.com/US-CBP/cbp-theme/wiki/Guide-to-Importing-Style-Sheets)
-
 ## Contributing
-We welcome contributions, please see our [Contribution Policy](https://github.com/US-CBP/open-source-policy/blob/master/CONTRIBUTING.md)
-To get started developing, see developer readme [here](./developer-guide.md).
+Please contribute to the main repository located [here](https://github.com/US-CBP/cbp-theme). This is a simple fork with some custom upgrades listed above.
 
 ## License
 Please refer to [CBP Open Source License](https://github.com/US-CBP/open-source-policy/blob/master/LICENSE.md)
